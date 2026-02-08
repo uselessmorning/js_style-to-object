@@ -12,7 +12,7 @@ function convertToObject(stylesString) {
     .reduce((acc, line) => {
       const [key, value] = line.split(':');
 
-      if (value) {
+      if (value !== undefined) {
         acc[key.trim()] = value.trim();
       }
 
